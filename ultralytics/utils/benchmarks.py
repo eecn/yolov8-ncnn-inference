@@ -108,12 +108,19 @@ def benchmark(
                 assert not isinstance(model, YOLOWorld), "YOLOWorldv2 TensorFlow exports not supported by onnx2tf yet"
             if i in {9, 10}:  # TF EdgeTPU and TF.js
                 assert not isinstance(model, YOLOWorld), "YOLOWorldv2 TensorFlow exports not supported by onnx2tf yet"
-            if i in {11}:  # Paddle
+            if i == 11:  # Paddle
                 assert not isinstance(model, YOLOWorld), "YOLOWorldv2 Paddle exports not supported yet"
                 assert not is_end2end, "End-to-end models not supported by PaddlePaddle yet"
                 assert LINUX or MACOS, "Windows Paddle exports not supported yet"
-            if i in {12, 13}:  # MNN, NCNN
-                assert not isinstance(model, YOLOWorld), "YOLOWorldv2 MNN, NCNN exports not supported yet"
+            if i == 12:  # MNN
+                assert not isinstance(model, YOLOWorld), "YOLOWorldv2 MNN exports not supported yet"
+            if i == 13:  # NCNN
+                assert not isinstance(model, YOLOWorld), "YOLOWorldv2 NCNN exports not supported yet"
+            if i == 14:  # IMX
+                assert not is_end2end
+                assert not isinstance(model, YOLOWorld), "YOLOWorldv2 IMX exports not supported"
+                assert model.task == "detect", "IMX only supported for detection task"
+                assert "C2f" in model.__str__(), "IMX only supported for YOLOv8"
             if "cpu" in device.type:
                 assert cpu, "inference not supported on CPU"
             if "cuda" in device.type:
