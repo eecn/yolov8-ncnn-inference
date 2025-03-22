@@ -22,7 +22,7 @@ In this guide, we are going to showcase how to find, label, and organize data fo
 - Gather data for training a custom YOLO11 model
 - Upload, convert and label data for YOLO11 format
 - Pre-process and augment data for model robustness
-- Dataset management for [YOLO11](../models/yolov8.md)
+- Dataset management for [YOLO11](../models/yolo11.md)
 - Export data in 40+ formats for model training
 - Upload custom YOLO11 model weights for testing and deployment
 - Gather Data for Training a Custom YOLO11 Model
@@ -106,7 +106,7 @@ Choose a model, then click "Continue" to enable Label Assist:
 When you open new images for annotation, Label Assist will trigger and recommend annotations.
 
 <p align="center">
-<img src="https://github.com/ultralytics/docs/releases/download/0/rf-label-assist.avif" alt="ALabel Assist recommending an annotation" width="800">
+<img src="https://github.com/ultralytics/docs/releases/download/0/rf-label-assist.avif" alt="Label Assist recommending an annotation" width="800">
 </p>
 
 ## Dataset Management for YOLO11
@@ -161,7 +161,7 @@ You are now ready to train YOLO11 on a custom dataset. Follow this [written guid
 
 ## Upload Custom YOLO11 Model Weights for Testing and Deployment
 
-Roboflow offers an infinitely scalable API for deployed models and SDKs for use with NVIDIA Jetsons, Luxonis OAKs, Raspberry Pis, GPU-based devices, and more.
+Roboflow offers a scalable API for deployed models and SDKs for use with NVIDIA Jetson, Luxonis OAK, Raspberry Pi, GPU-based devices, and more.
 
 You can deploy YOLO11 models by uploading YOLO11 weights to Roboflow. You can do this in a few lines of Python code. Create a new Python file and add the following code:
 
