@@ -56,7 +56,7 @@ if __name__ == "__main__":
     # Create an argument parser to handle command-line arguments
     ASSERT = "D://workspace//deploy_model//yolov8-ncnn-inference//deploy//python//"
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, default=ASSERT+"yolo11s-pose.mnn", help="Input your ONNX model.")
+    parser.add_argument("--model", type=str, default=ASSERT+"yolo11s-pose.mnn", help="Input your MNN model.")
     parser.add_argument("--img", type=str, default=ASSERT+"bus.jpg", help="Path to input image.")
     parser.add_argument("--conf-thres", type=float, default=0.5, help="Confidence threshold")
     parser.add_argument("--iou-thres", type=float, default=0.5, help="NMS IoU threshold")
