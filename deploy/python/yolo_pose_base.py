@@ -6,7 +6,7 @@ from typing import List, Tuple
 import cv2
 import numpy as np
 
-from ultralytics.utils import ASSETS, yaml_load
+from ultralytics.utils import ASSETS, YAML # yaml_load
 from ultralytics.utils.checks import  check_yaml
 from abc import ABC, abstractmethod
 
@@ -49,7 +49,7 @@ class YOLOPOSEBASE(ABC):
         self.iou_thres = iou_thres
 
         # Load the class names from the COCO dataset
-        yaml_cfg = yaml_load(check_yaml("coco8-pose.yaml"))
+        yaml_cfg = YAML.load(check_yaml("coco8-pose.yaml"))
         self.classes = yaml_cfg["names"]
         self.kpt_shape = yaml_cfg["kpt_shape"]
 
