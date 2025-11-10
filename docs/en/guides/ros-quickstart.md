@@ -243,7 +243,7 @@ Using YOLO, it is possible to extract and combine information from both RGB and 
 
 !!! warning "RGB-D Cameras"
 
-    When working with depth images, it is essential to ensure that the RGB and depth images are correctly aligned. RGB-D cameras, such as the [Intel RealSense](https://www.intelrealsense.com/) series, provide synchronized RGB and depth images, making it easier to combine information from both sources. If using separate RGB and depth cameras, it is crucial to calibrate them to ensure accurate alignment.
+    When working with depth images, it is essential to ensure that the RGB and depth images are correctly aligned. RGB-D cameras, such as the [Intel RealSense](https://realsenseai.com/) series, provide synchronized RGB and depth images, making it easier to combine information from both sources. If using separate RGB and depth cameras, it is crucial to calibrate them to ensure accurate alignment.
 
 #### Depth Step-by-Step Usage
 
@@ -401,8 +401,7 @@ import ros_numpy
 
 
 def pointcloud2_to_array(pointcloud2: PointCloud2) -> tuple:
-    """
-    Convert a ROS PointCloud2 message to a numpy array.
+    """Convert a ROS PointCloud2 message to a numpy array.
 
     Args:
         pointcloud2 (PointCloud2): the PointCloud2 message
@@ -472,8 +471,7 @@ for index, class_id in enumerate(classes):
 
 
     def pointcloud2_to_array(pointcloud2: PointCloud2) -> tuple:
-        """
-        Convert a ROS PointCloud2 message to a numpy array.
+        """Convert a ROS PointCloud2 message to a numpy array.
 
         Args:
             pointcloud2 (PointCloud2): the PointCloud2 message
